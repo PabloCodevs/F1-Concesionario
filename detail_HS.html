@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <title>Concesionario F1</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Rubik&display=swap" rel="stylesheet"> 
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-dark py-3 px-lg-5 d-none d-lg-block">
+        <div class="row">
+            <div class="col-md-6 text-center text-lg-left mb-2 mb-lg-0">
+                <div class="d-inline-flex align-items-center">
+                    <a class="text-body pr-3" href="https://www.jazztel.com/"><i class="fa fa-phone-alt mr-2"></i>913 001 001</a>
+                    <span class="text-body">|</span>
+                    <a class="text-body px-3" href="https://www.google.com/intl/es/gmail/about/"><i class="fa fa-envelope mr-2"></i>Concesionario@F1.com</a>
+                </div>
+            </div>
+            <div class="col-md-6 text-center text-lg-right">
+                <div class="d-inline-flex align-items-center">
+                    <a class="text-body px-3" href="https://es-es.facebook.com/" target="_blank">
+                        <i class="fab fa-facebook-f"></i>
+                        Facebook
+                    </a>
+                    <a class="text-body px-3" href="https://twitter.com/?lang=es" target="_blank">
+                        <i class="fab fa-twitter"></i>
+                        Twitter
+                    </a>
+                    <a class="text-body px-3" href="https://es.linkedin.com/" target="_blank">
+                        <i class="fab fa-linkedin-in"></i>
+                        Linkedin
+                    </a>
+                    <a class="text-body px-3" href="https://www.instagram.com/" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                        Instgram
+                    </a>
+                    <a class="text-body pl-3" href="https://www.youtube.com/" target="_blank">
+                        <i class="fab fa-youtube"></i>
+                        Youtube
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+
+    <!-- Navbar Start -->
+    <div class="container-fluid position-relative nav-bar p-0">
+        <div class="position-relative px-lg-5" style="z-index: 9;">
+            <nav class="navbar navbar-expand-lg bg-secondary navbar-dark py-3 py-lg-0 pl-3 pl-lg-5">
+                <a href="index.html" class="navbar-brand">
+                    <h1 class="text-uppercase text-primary mb-1">Concesionario F1</h1>
+                </a>
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-between px-3" id="navbarCollapse">
+                    <div class="navbar-nav ml-auto py-0">
+                        <a href="index.html" class="nav-item nav-link active">Inicio</a>
+                        <a href="about.html" class="nav-item nav-link">Sobre nosotros</a>
+                        <a href="service.html" class="nav-item nav-link">Servicios</a>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Vehículos</a>
+                            <div class="dropdown-menu rounded-0 m-0">
+                                <a href="car.html" class="dropdown-item">Lista de Vehículos</a>
+                                <a href="detail.html" class="dropdown-item">Detalles del Vehículo</a>
+                                <a href="booking.html" class="dropdown-item">Alquiler de Vehículos</a>
+                            </div>
+                        </div>
+                        <a href="contact.html" class="nav-item nav-link">Contacto</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- Navbar End -->
+
+
+    <!-- Search Start -->
+    <div class="container-fluid bg-white pt-3 px-lg-5">
+        <div class="row mx-n2">
+            <div class="col-xl-2 col-lg-4 col-md-6 px-2">
+                <select class="custom-select px-4 mb-3" style="height: 50px;">
+                    <option selected>Lugar de recogida</option>
+                    <option value="1">Madrid</option>
+                    <option value="2">Barcelona</option>
+                    <option value="3">Sevilla</option>
+                </select>
+            </div>
+            <div class="col-xl-2 col-lg-4 col-md-6 px-2">
+                <select class="custom-select px-4 mb-3" style="height: 50px;">
+                    <option selected>Lugar de entrega</option>
+                    <option value="1">Madrid</option>
+                    <option value="2">Barcelona</option>
+                    <option value="3">Sevilla</option>
+                </select>
+            </div>
+            <div class="col-xl-2 col-lg-4 col-md-6 px-2">
+                <div class="date mb-3" id="date" data-target-input="nearest">
+                    <input type="text" class="form-control p-4 datetimepicker-input" placeholder="Fecha de recogida"
+                        data-target="#date" data-toggle="datetimepicker" />
+                </div>
+            </div>
+            <div class="col-xl-2 col-lg-4 col-md-6 px-2">
+                <div class="time mb-3" id="time" data-target-input="nearest">
+                    <input type="text" class="form-control p-4 datetimepicker-input" placeholder="Hora de recogida"
+                        data-target="#time" data-toggle="datetimepicker" />
+                </div>
+            </div>
+            <div class="col-xl-2 col-lg-4 col-md-6 px-2">
+                <select class="custom-select px-4 mb-3" style="height: 50px;">
+                    <option selected>Sel. su vehículo</option>
+                    <option value="1">Mercedes</option>
+                    <option value="2">Red Bull</option>
+                    <option value="3">McLaren</option>
+                    <option value="4">Ferrari</option>
+                    <option value="5">Alpine</option>
+                    <option value="6">AlphaTauri</option>
+                    <option value="7">Aston Martin</option>
+                    <option value="8">Williams</option>
+                    <option value="9">Alfa Romeo</option>
+                    <option value="10">Haas</option>
+
+                </select>
+            </div>
+            <div class="col-xl-2 col-lg-4 col-md-6 px-2">
+                <button class="btn btn-primary btn-block mb-3" type="submit" style="height: 50px;">Buscar</button>
+            </div>
+        </div>
+    </div>
+    <!-- Search End -->
+
+
+    <!-- Page Header Start -->
+    <div class="container-fluid page-header">
+        <h1 class="display-3 text-uppercase text-white mb-3">Detalles del Monoplaza</h1>
+        <div class="d-inline-flex text-white">
+            <h6 class="text-uppercase m-0"><a class="text-white" href="">Inicio</a></h6>
+            <h6 class="text-body m-0 px-3">/</h6>
+            <h6 class="text-uppercase text-body m-0">Detalles del monoplaza</h6>
+        </div>
+    </div>
+    <!-- Page Header Start -->
+
+
+    <!-- Detail Start -->
+    <div class="container-fluid pt-5">
+        <div class="container pt-5">
+            <div class="row">
+                <div class="col-lg-8 mb-5">
+                    <h1 class="display-4 text-uppercase mb-5">Haas VF-22</h1>
+                    <div class="row mx-n2 mb-3">
+                        <div class="col-md-3 col-6 px-2 pb-2">
+                            <img class="img-fluid w-100" src="img/HS_1.jpg" alt="">
+                        </div>
+                        <div class="col-md-3 col-6 px-2 pb-2">
+                            <img class="img-fluid w-100" src="img/HS_2.jpg" alt="">
+                        </div>
+                        <div class="col-md-3 col-6 px-2 pb-2">
+                            <img class="img-fluid w-100" src="img/HS_3.jpg" alt="">
+                        </div>
+                        <div class="col-md-3 col-6 px-2 pb-2">
+                            <img class="img-fluid w-100" src="img/HS_4.jpg" alt="">
+                        </div>
+                    </div>
+                    <p>El Haas VF-22 es un monoplaza de Fórmula 1 diseñado por Haas F1 Team para competir en la temporada 2022.
+
+                    La decoración fue presentada el 4 de febrero de 2022. El coche fue conducido por Nikita Mazepin y Mick Schumacher durante la pretemporada en Barcelona, sin embargo, la escudería decidió rescindir el contrato de Mazepin debido al impacto que produjo la invasión rusa de Ucrania de 2022. Anteriormente Haas había terminado su vínculo con la empresa rusa Uralkali (patrocinador principal) por el mismo motivo. Finalmente, Kevin Magnussen ocupa el asiento del ruso en el equipo y volvió a la F1 tras un año de ausencia.</p>
+                    <div class="row pt-2">
+                        <div class="col-md-3 col-6 mb-2">
+                            <i class="fa fa-car text-primary mr-2"></i>
+                            <span>Modelo: 2022</span>
+                        </div>
+                        <div class="col-md-3 col-6 mb-2">
+                            <i class="fa fa-cogs text-primary mr-2"></i>
+                            <span>Man</span>
+                        </div>
+                        <div class="col-md-3 col-6 mb-2">
+                            <i class="fa fa-road text-primary mr-2"></i>
+                            <span>342KM/H</span>
+                        </div>
+                        <div class="col-md-3 col-6 mb-2">
+                            <i class="fa fa-eye text-primary mr-2"></i>
+                            <span>GPS Navigation</span>
+                        </div>
+                    </div>
+               </div>
+
+                <div class="col-lg-4 mb-5">
+                    <div class="bg-secondary p-5">
+                        <h3 class="text-primary text-center mb-4">Comprobar Disponibilidad</h3>
+                        <div class="form-group">
+                            <select class="custom-select px-4" style="height: 50px;">
+                                <option selected>Lugar de recogida</option>
+                                <option value="1">Madrid</option>
+                                <option value="2">Barcelona</option>
+                                <option value="3">Sevilla</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <select class="custom-select px-4" style="height: 50px;">
+                                <option selected>Lugar de entrega</option>
+                                <option value="1">Madrid</option>
+                                <option value="2">Barclona</option>
+                                <option value="3">Sevilla</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <div class="date" id="date1" data-target-input="nearest">
+                                <input type="text" class="form-control p-4 datetimepicker-input" placeholder="Fecha de recogida"
+                                    data-target="#date1" data-toggle="datetimepicker" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="time" id="time1" data-target-input="nearest">
+                                <input type="text" class="form-control p-4 datetimepicker-input" placeholder="Hora de recogida"
+                                    data-target="#time1" data-toggle="datetimepicker" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <select class="custom-select px-4" style="height: 50px;">
+                                <option selected>Seleccionar Usuario</option>
+                                <option value="1">Usuario 1</option>
+                                <option value="2">usuario 2</option>
+                                <option value="3">Usuario 3</option>
+                            </select>
+                        </div>
+                        <div class="form-group mb-0">
+                            <button class="btn btn-primary btn-block" type="submit" style="height: 50px;">Comprobar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Detail End -->
+
+
+    <!-- Related Car Start -->
+    <div class="container-fluid pb-5">
+        <div class="container pb-5">
+            <h2 class="mb-4">Monoplazas Relacionados</h2>
+            <div class="owl-carousel related-carousel position-relative" style="padding: 0 30px;">
+                <div class="rent-item">
+                    <img class="img-fluid mb-4" src="img/car-rent-1.png" alt="">
+                    <h4 class="text-uppercase mb-4">Red Bull RB18</h4>
+                    <div class="d-flex justify-content-center mb-4">
+                        <div class="px-2">
+                            <i class="fa fa-car text-primary mr-1"></i>
+                            <span>2022</span>
+                        </div>
+                        <div class="px-2 border-left border-right">
+                            <i class="fa fa-cogs text-primary mr-1"></i>
+                            <span>MAN</span>
+                        </div>
+                        <div class="px-2">
+                            <i class="fa fa-road text-primary mr-1"></i>
+                            <span>335,1KM/H</span>
+                        </div>
+                    </div>
+                    <a class="btn btn-primary px-3" href="detail.html">8.000€/Día</a>
+                </div>
+                <div class="rent-item">
+                    <img class="img-fluid mb-4" src="img/car-rent-3.png" alt="">
+                    <h4 class="text-uppercase mb-4">ALPINE A552</h4>
+                    <div class="d-flex justify-content-center mb-4">
+                        <div class="px-2">
+                            <i class="fa fa-car text-primary mr-1"></i>
+                            <span>2022</span>
+                        </div>
+                        <div class="px-2 border-left border-right">
+                            <i class="fa fa-cogs text-primary mr-1"></i>
+                            <span>MAN</span>
+                        </div>
+                        <div class="px-2">
+                            <i class="fa fa-road text-primary mr-1"></i>
+                            <span>342KM/H</span>
+                        </div>
+                    </div>
+                    <a class="btn btn-primary px-3" href="detail_AL.html">7.800€/Día</a>
+                </div>
+                 <div class="rent-item">
+                    <img class="img-fluid mb-4" src="img/car-rent-2.png" alt="">
+                    <h4 class="text-uppercase mb-4">Ferrari F1-75</h4>
+                    <div class="d-flex justify-content-center mb-4">
+                        <div class="px-2">
+                            <i class="fa fa-car text-primary mr-1"></i>
+                            <span>2022</span>
+                        </div>
+                        <div class="px-2 border-left border-right">
+                            <i class="fa fa-cogs text-primary mr-1"></i>
+                            <span>MAN</span>
+                        </div>
+                        <div class="px-2">
+                            <i class="fa fa-road text-primary mr-1"></i>
+                            <span>339,4KM/H</span>
+                        </div>
+                    </div>
+                    <a class="btn btn-primary px-3" href="detail_FR.html">8.000€/Día</a>
+                </div>
+               <div class="rent-item">
+                    <img class="img-fluid mb-4" src="img/car-rent-5.png" alt="">
+                    <h4 class="text-uppercase mb-4">Aston Martin AMR22</h4>
+                    <div class="d-flex justify-content-center mb-4">
+                        <div class="px-2">
+                            <i class="fa fa-car text-primary mr-1"></i>
+                            <span>2022</span>
+                        </div>
+                        <div class="px-2 border-left border-right">
+                            <i class="fa fa-cogs text-primary mr-1"></i>
+                            <span>MAN</span>
+                        </div>
+                        <div class="px-2">
+                            <i class="fa fa-road text-primary mr-1"></i>
+                            <span>314KM/H</span>
+                        </div>
+                    </div>
+                    <a class="btn btn-primary px-3" href="detail_MR.html">7.250€/Día</a>
+                </div>
+               <div class="rent-item">
+                    <img class="img-fluid mb-4" src="img/car-rent-6.png" alt="">
+                    <h4 class="text-uppercase mb-4">Williams FW44</h4>
+                    <div class="d-flex justify-content-center mb-4">
+                        <div class="px-2">
+                            <i class="fa fa-car text-primary mr-1"></i>
+                            <span>2022</span>
+                        </div>
+                        <div class="px-2 border-left border-right">
+                            <i class="fa fa-cogs text-primary mr-1"></i>
+                            <span>MAN</span>
+                        </div>
+                        <div class="px-2">
+                            <i class="fa fa-road text-primary mr-1"></i>
+                            <span>324KM/H</span>
+                        </div>
+                    </div>
+                    <a class="btn btn-primary px-3" href="detail_WM.html">7.100€/Día</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Related Car End -->
+
+
+    <!-- Vendor Start -->
+    <div class="container-fluid py-5">
+        <div class="container py-5">
+            <div class="owl-carousel vendor-carousel">
+                <div class="bg-light p-4">
+                    <img src="img/vendor-1.png" alt="Ferrari">
+                </div>
+                <div class="bg-light p-4">
+                    <img src="img/vendor-2.png" alt="Mercedes">
+                </div>
+                <div class="bg-light p-4">
+                    <img src="img/vendor-3.png" alt="Red Bull">
+                </div>
+                <div class="bg-light p-4">
+                    <img src="img/vendor-4.png" alt="McLaren">
+                </div>
+                <div class="bg-light p-4">
+                    <img src="img/vendor-5.png" alt="Alpine">
+                </div>
+                <div class="bg-light p-4">
+                    <img src="img/vendor-6.png" alt="Aston Martin">
+                </div>
+                <div class="bg-light p-4">
+                    <img src="img/vendor-7.png" alt="Williams">
+                </div>
+                <div class="bg-light p-4">
+                    <img src="img/vendor-8.png" alt="Haas">
+                </div>
+                <div class="bg-light p-4">
+                    <img src="img/vendor-9.png" alt="AlphaTauri">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Vendor End -->
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-secondary py-5 px-sm-3 px-md-5" style="margin-top: 90px;">
+        <div class="row pt-5">
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h4 class="text-uppercase text-light mb-4">Ponte en contacto</h4>
+                <p class="mb-2"><i class="fa fa-map-marker-alt text-white mr-3"></i>Carr. de Fuencarral, 18, 28108 Alcobendas, Madrid</p>
+                <p class="mb-2"><i class="fa fa-phone-alt text-white mr-3"></i>913 001 001</p>
+                <p><i class="fa fa-envelope text-white mr-3"></i>Concesionario@F1.com</p>
+                <h6 class="text-uppercase text-white py-2">Síguenos</h6>
+                <div class="d-flex justify-content-start">
+                    <a class="btn btn-lg btn-dark btn-lg-square mr-2" href="https://twitter.com/?lang=es"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-lg btn-dark btn-lg-square mr-2" href="https://es-es.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-lg btn-dark btn-lg-square mr-2" href="https://es.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-lg btn-dark btn-lg-square" href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h4 class="text-uppercase text-light mb-4">Links Útiles</h4>
+                <div class="d-flex flex-column justify-content-start">
+                    <a class="text-body mb-2" href="#"><i class="fa fa-angle-right text-white mr-2"></i>Politica de privacidad</a>
+                    <a class="text-body mb-2" href="#"><i class="fa fa-angle-right text-white mr-2"></i>Términos y condiciones</a>
+                    <a class="text-body mb-2" href="#"><i class="fa fa-angle-right text-white mr-2"></i>Registro de nuevos usuarios</a>
+                    <a class="text-body mb-2" href="#"><i class="fa fa-angle-right text-white mr-2"></i>Programa de Afiliados</a>
+                    <a class="text-body mb-2" href="#"><i class="fa fa-angle-right text-white mr-2"></i>Reemblso</a>
+                    <a class="text-body" href="#"><i class="fa fa-angle-right text-white mr-2"></i>Ayuda & FQAs</a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h4 class="text-uppercase text-light mb-4">Galería F1</h4>
+                <div class="row mx-n1">
+                    <div class="col-4 px-1 mb-2">
+                        <a href=""><img class="w-100" src="img/gallery-1.jpg" alt=""></a>
+                    </div>
+                    <div class="col-4 px-1 mb-2">
+                        <a href=""><img class="w-100" src="img/gallery-2.jpg" alt=""></a>
+                    </div>
+                    <div class="col-4 px-1 mb-2">
+                        <a href=""><img class="w-100" src="img/gallery-3.jpg" alt=""></a>
+                    </div>
+                    <div class="col-4 px-1 mb-2">
+                        <a href=""><img class="w-100" src="img/gallery-4.jpg" alt=""></a>
+                    </div>
+                    <div class="col-4 px-1 mb-2">
+                        <a href=""><img class="w-100" src="img/gallery-5.jpg" alt=""></a>
+                    </div>
+                    <div class="col-4 px-1 mb-2">
+                        <a href=""><img class="w-100" src="img/gallery-6.jpg" alt=""></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h4 class="text-uppercase text-light mb-4">Recibe Noticias</h4>
+                <p class="mb-4">Suscríbete y nuestras noticias y entérate de los descuentos en nuestra página web</p>
+                <div class="w-100 mb-3">
+                    <div class="input-group">
+                        <input type="text" class="form-control bg-dark border-dark" style="padding: 25px;" placeholder="E-Mail">
+                        <div class="input-group-append">
+                            <button class="btn btn-primary text-uppercase px-3">Confirmar</button>
+                        </div>
+                    </div>
+                </div>
+                <i>Gracias por confiar en nosotros</i>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid bg-dark py-4 px-sm-3 px-md-5">
+        <p class="mb-2 text-center text-body">&copy; <a href="#">2022 - Concesionario F1</a>. Todos los derechos reservados.</p>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
